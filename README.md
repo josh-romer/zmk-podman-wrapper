@@ -22,13 +22,23 @@ This project contains two sub-repositories:
 
 ## Output
 
-Build artifacts will be placed in the `./out` directory.
+Build artifacts will be placed in timestamped directories under `./out`.
 
 Example output:
 ```
 out/
-├── cradio_left-nice_nano_v2-zmk.uf2
-└── cradio_right-nice_nano_v2-zmk.uf2
+└── 20251005-143022/
+    ├── cradio_left-nice_nano_v2-zmk.uf2
+    └── cradio_right-nice_nano_v2-zmk.uf2
 ```
 
 Flash the `.uf2` files to your keyboard by copying them to the bootloader drive.
+
+## Cleaning
+
+To remove all build artifacts, cloned repositories, and the container image:
+```bash
+./clean.sh
+```
+
+This will delete: `build/`, `zmk/`, `zmk-config/`, `out/`, and the `zmk` container image.

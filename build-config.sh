@@ -1,9 +1,11 @@
+#!/usr/bin/env bash
+
 # podman run -it --rm --security-opt label=disable --workdir /workspaces/zmk -v ./zmk:/workspaces/zmk  -v ./zmk-config:/workspaces/zmk-config  -p 3000:3000  zmk '/bin/bash'
 #
 mkdir -p out build
 
 # Pull latest config
-cd zmk-config && git pull && cd ..
+cd zmk-config || exit ; git pull; cd .. || exit
 
 # Create timestamped build directory
 BUILD_DIR="$(date +%Y%m%d-%H%M%S)"
