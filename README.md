@@ -19,11 +19,18 @@ This project contains two sub-repositories:
    ```
    This will clone the ZMK repository and build the container image.
 
-2. Build the configuration:
+3. Build the configuration:
    ```bash
    ./build-config.sh
    ```
    This will run the build process inside the container.
+
+   For pristine builds (removes all existing build files):
+   ```bash
+   ./build-config.sh -p
+   # or
+   ./build-config.sh --pristine
+   ```
 
 ## Output
 
