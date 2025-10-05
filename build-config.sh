@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Change to script directory
+cd "$(dirname "$0")" || exit
+
 # podman run -it --rm --security-opt label=disable --workdir /workspaces/zmk -v ./zmk:/workspaces/zmk  -v ./zmk-config:/workspaces/zmk-config  -p 3000:3000  zmk '/bin/bash'
 #
 mkdir -p out build

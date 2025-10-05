@@ -8,7 +8,12 @@ This project contains two sub-repositories:
 
 ## Setup
 
-1. Create the container:
+1. Make scripts executable:
+   ```bash
+   chmod +x create-container.sh build-config.sh clean.sh
+   ```
+
+2. Create the container:
    ```bash
    ./create-container.sh
    ```
