@@ -1,0 +1,7 @@
+# Cloned repositories
+zmk/
+zmk-config/
+
+# Build artifacts
+build/
+out/
